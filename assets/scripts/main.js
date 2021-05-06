@@ -111,4 +111,18 @@ const seletOpportunityType = elementCreator('select', {
       placeholder: 'Av. Brasil',
       required: true
     }, 'Rua')
+    const inputNumber = elementCreator('input', {
+      type: 'text',
+      name: 'numero',
+      id: 'numero',
+      placeholder: '123',
+      required: true
+    }, 'Número')
+    const inputComp = elementCreator('input', {
+      type: 'text',
+      name: 'complemento',
+      id: 'complemento',
+      placeholder: 'Bloco A - Apto. 51',
+      required: true
+    }, 'Complemento')
     
