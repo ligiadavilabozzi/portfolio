@@ -42,11 +42,73 @@ window.onload = () => {
     const form = document.createElement('form')
     form.setAttribute('action', '')
     form.setAttribute('method', 'POST')
-    // TODO
+    const inputName = elementCreator('input', {
+      type: 'text',
+      name: 'nome',
+      id: 'nome',
+      placeholder: 'Fulano de Tal',
+      required: true
+    }, 'Nome')
+    const inputCompany = elementCreator('input', {
+      type: 'text',
+      name: 'empresa',
+      id: 'empresa',
+      placeholder: 'Alphabet Inc.',
+      required: true
+    }, 'Empresa')
+    const inputEmail = elementCreator('input', {
+      type: 'email',
+      name: 'email',
+      id: 'email',
+      placeholder: 'rh@google.com',
+      required: true
+    }, 'Email')
+    const inputPhone = elementCreator('input', {
+      type: 'number',
+      name: 'telefone',
+      id: 'telefone',
+      placeholder: '1123456789',
+      required: true
+    }, 'Telefone')
   }
-
-
-
-
-
-}
+const seletOpportunityType = elementCreator('select', {
+      name: 'tipo',
+      id: 'tipo',
+      required: true
+    }, 'Tipo de Vaga', ['Freelance', 'Estágio', 'CLT', 'PJ'])
+    const inputZipcode = elementCreator('input', {
+      type: 'text',
+      name: 'cep',
+      id: 'cep',
+      placeholder: '05089001',
+      required: true
+    }, 'CEP')
+    const inputState = elementCreator('input', {
+      type: 'text',
+      name: 'uf',
+      id: 'uf',
+      placeholder: 'SP',
+      required: true
+    }, 'UF')
+    const inputCity = elementCreator('input', {
+      type: 'text',
+      name: 'cidade',
+      id: 'cidade',
+      placeholder: 'São Paulo',
+      required: true
+    }, 'Cidade')
+    const inputNeighborhood = elementCreator('input', {
+      type: 'text',
+      name: 'bairro',
+      id: 'bairro',
+      placeholder: 'Centro',
+      required: true
+    }, 'Bairro')
+    const inputStreet = elementCreator('input', {
+      type: 'text',
+      name: 'rua',
+      id: 'rua',
+      placeholder: 'Av. Brasil',
+      required: true
+    }, 'Rua')
+    
