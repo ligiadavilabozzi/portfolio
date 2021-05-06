@@ -205,3 +205,13 @@ const updateInputStyle = () => {
     input.classList.add('mb16', 'mt8')
   }
 }
+
+//updateSelectTag- atualiza o estilo dos select
+const updateSelectTag = () => {
+  const selects = document.querySelectorAll('select')
+  for (let select of selects) {
+    select.style = 'border: 1px solid black; border-radius:16px; height: 32px; outline:none; padding:4px 8px';
+    select.classList.add('mb16', 'mt8')
+  }
+}
+
