@@ -71,7 +71,7 @@ window.onload = () => {
       required: true
     }, 'Telefone')
   
-const seletOpportunityType = elementCreator('select', {
+const selectOpportunityType = elementCreator('select', {
       name: 'tipo',
       id: 'tipo',
       required: true
@@ -138,4 +138,27 @@ const seletOpportunityType = elementCreator('select', {
     const submitButton = elementCreator('button', {
       type: 'submit'
     }, 'Enviar')
+    form.appendChild(inputName)
+    form.appendChild(inputCompany)
+    form.appendChild(selectOpportunityType)
+    form.appendChild(inputEmail)
+    form.appendChild(inputPhone)
+    form.appendChild(inputZipcode)
+    form.appendChild(inputState)
+    form.appendChild(inputCity)
+    form.appendChild(inputNeighborhood)
+    form.appendChild(inputStreet)
+    form.appendChild(inputNumber)
+    form.appendChild(inputComp)
+    form.appendChild(textArea)
+    form.appendChild(submitButton)
+    return form
   }
+}
+
+//implementação do formulário de contato
+const makeContactForm = () =>{
+const contactSection = document.querySelector('.section.contact')
+const form = createContactForm()
+contactSection.appendChild(form)
+}
