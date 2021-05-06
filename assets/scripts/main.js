@@ -70,8 +70,8 @@ window.onload = () => {
       placeholder: '1123456789',
       required: true
     }, 'Telefone')
-  
-const selectOpportunityType = elementCreator('select', {
+
+    const selectOpportunityType = elementCreator('select', {
       name: 'tipo',
       id: 'tipo',
       required: true
@@ -125,13 +125,13 @@ const selectOpportunityType = elementCreator('select', {
       placeholder: 'Bloco A - Apto. 51',
       required: true
     }, 'Complemento')
-    const textArea = elementCreator('textarea',{
-      name: 'mensagem', 
+    const textArea = elementCreator('textarea', {
+      name: 'mensagem',
       id: 'mensagem',
       placeholder: 'Quero te contratar!',
-      rows: '4', 
+      rows: '4',
       cols: '50',
-      maxlength: '200', 
+      maxlength: '200',
       style: 'resize: vertical; overflow: auto; border-radius:16px; padding: 8px',
       required: false
     }, 'Detalhes')
@@ -157,17 +157,17 @@ const selectOpportunityType = elementCreator('select', {
 }
 
 //implementação do formulário de contato
-const makeContactForm = () =>{
-const contactSection = document.querySelector('.section.contact')
-const form = createContactForm()
-contactSection.appendChild(form)
+const makeContactForm = () => {
+  const contactSection = document.querySelector('.section.contact')
+  const form = createContactForm()
+  contactSection.appendChild(form)
 }
 /*
-   * ADICIONANDO ESTILO INICIAL AO FORM
-   */
-  // Add Contact Form Style Through Style Tag
-  const addContactFormStyle = () => {
-    const style = `
+ * ADICIONANDO ESTILO INICIAL AO FORM
+ */
+// Add Contact Form Style Through Style Tag
+const addContactFormStyle = () => {
+  const style = `
       form {
         align-items: center;
         display: flex;
@@ -192,7 +192,16 @@ contactSection.appendChild(form)
         flex: 1 0 100% !important;
       }
     `
-    const styleTag = document.createElement('style')
-    styleTag.innerHTML = style
-    head.appendChild(styleTag)
+  const styleTag = document.createElement('style')
+  styleTag.innerHTML = style
+  head.appendChild(styleTag)
+}
+
+//updateInputStyle - atualiza o estilo dos inputs
+const updateInputStyle = () => {
+  const inputs = document.querySelectorAll('input')
+  for (let input of inputs) {
+    input.style = 'border: 1px solid black; border-radius:16px; height: 32px; outline:none; padding:4px 8px';
+    input.classList.add('mb16', 'mt8')
   }
+}
