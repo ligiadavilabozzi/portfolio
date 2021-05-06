@@ -162,3 +162,37 @@ const contactSection = document.querySelector('.section.contact')
 const form = createContactForm()
 contactSection.appendChild(form)
 }
+/*
+   * ADICIONANDO ESTILO INICIAL AO FORM
+   */
+  // Add Contact Form Style Through Style Tag
+  const addContactFormStyle = () => {
+    const style = `
+      form {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+      }
+      .input-container,
+      .input-container ~ button {
+        align-items: stretch;
+        display: flex;
+        flex: 1 1 40%;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+      }
+      .input-container:nth-child(odd) {
+        margin-right: 8px;
+      }
+      .input-container:nth-child(even) {
+        margin-left: 8px;
+      }
+      .input-container:last-of-type {
+        flex: 1 0 100% !important;
+      }
+    `
+    const styleTag = document.createElement('style')
+    styleTag.innerHTML = style
+    head.appendChild(styleTag)
+  }
