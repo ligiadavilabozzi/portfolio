@@ -213,5 +213,33 @@ const updateSelectTag = () => {
     select.style = 'border: 1px solid black; border-radius:16px; height: 32px; outline:none; padding:4px 8px';
     select.classList.add('mb16', 'mt8')
   }
+
+
+//updateSubmitButtonStyle
+const updateSubmitButtonStyle = () => {
+  const button = document.querySelector('button[type="submit"]')
+  const normalStyle = 'border: 1px solid white;background-color:var(--secondary-color);border-radius:16px;color:#fff;font-weight:bold;height:32px;margin: 24px auto 8px;outline:none;padding:8px;'
+  const hoverStyle = 'border: 1px solid black;background-color:var(--tertiary-color);border-radius:16px;color:#000;font-weight:bold;height:32px;margin: 24px auto 8px;outline:none;padding:8px;cursor:pointer;'
+  button.style = normalStyle
+  button.onmouseover = () => { button.style = hoverStyle }
+  button.onmouseout = () => { button.style = normalStyle }
 }
 
+//updatePortfolioLogo 
+const updatePortfolioLogo = () =>{
+  const portfolio = document.querySelector('.portfolio_link_container')
+  return portfolio.style.backgroundAttachment = 'fixed'
+}
+
+const init = () => {
+  makeContactForm()
+  addContactFormStyle()
+  updateInputStyle()
+  updateSelectTag()
+  updateSubmitButtonStyle()
+  updatePortfolioLogo()
+}
+
+init()
+
+}
