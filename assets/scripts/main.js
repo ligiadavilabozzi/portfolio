@@ -70,7 +70,7 @@ window.onload = () => {
       placeholder: '1123456789',
       required: true
     }, 'Telefone')
-  }
+  
 const seletOpportunityType = elementCreator('select', {
       name: 'tipo',
       id: 'tipo',
@@ -125,4 +125,17 @@ const seletOpportunityType = elementCreator('select', {
       placeholder: 'Bloco A - Apto. 51',
       required: true
     }, 'Complemento')
-    
+    const textArea = elementCreator('textarea',{
+      name: 'mensagem', 
+      id: 'mensagem',
+      placeholder: 'Quero te contratar!',
+      rows: '4', 
+      cols: '50',
+      maxlength: '200', 
+      style: 'resize: vertical; overflow: auto; border-radius:16px; padding: 8px',
+      required: false
+    }, 'Detalhes')
+    const submitButton = elementCreator('button', {
+      type: 'submit'
+    }, 'Enviar')
+  }
